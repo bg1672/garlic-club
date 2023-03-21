@@ -6,7 +6,7 @@
 		body {
 			background-color: #000;
 			color: #fff;
-			font-family: monospace;
+			font-family: sans-serif;
 			font-size: 1.2rem;
 			text-align: center;
 			margin: 0;
@@ -16,37 +16,23 @@
 		h1 {
 			font-size: 5rem;
 			margin-top: 2rem;
-			text-shadow: 4px 4px 0px #fff, 6px 6px 0px rgba(255, 255, 255, 0.3);
-			transform: skew(-15deg, 15deg);
+			text-transform: uppercase;
 			display: inline-block;
-			padding: 0.3em 1.2em;
-			background-image: linear-gradient(to top, #fff 50%, #bbb 50%);
-			background-size: 100% 200%;
-			transition: all 0.2s ease-in-out;
-			animation: neon 1.5s ease-in-out infinite alternate;
-			box-shadow: 0 0 10px #fff;
-			border-radius: 0.3em;
-		}
-
-		h1:hover {
-			transform: skew(-15deg, 15deg) translate(5px, -5px);
-			background-position: 0 -100%;
-			box-shadow: 0 0 20px #fff;
-		}
-
-		@keyframes neon {
-			from {
-				background-position: 0 0;
-			}
-			to {
-				background-position: 0 -200%;
-			}
+			padding: 0.5em 1em;
+			color: transparent;
+			-webkit-text-stroke: 1px #fff;
+			animation: glitter 1s ease-in-out infinite alternate;
 		}
 
 		img {
 			margin: 2rem;
 			width: 200px;
 			height: 200px;
+		}
+
+		@keyframes glitter {
+			from { color: #fff; }
+			to { color: #ff69b4; }
 		}
 	</style>
 </head>
