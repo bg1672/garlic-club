@@ -14,25 +14,37 @@
 		}
 
 		h1 {
-			font-size: 5rem;
+			position: relative;
+			font-size: 7rem;
 			margin-top: 2rem;
 			text-transform: uppercase;
 			display: inline-block;
-			padding: 0.5em 1em;
+			letter-spacing: 0.2em;
 			color: transparent;
-			-webkit-text-stroke: 1px #fff;
-			animation: glitter 1s ease-in-out infinite alternate;
+			text-shadow: 0 0 20px #fff;
+			transform: perspective(1000px) rotateY(-25deg);
+			animation: glow 3s ease-in-out infinite;
+			background: repeating-linear-gradient(-45deg, #ff9d00, #ff9d00 10px, #fff 0, #fff 20px);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+
+		@keyframes glow {
+			0% {
+				text-shadow: 0 0 20px #fff;
+			}
+			50% {
+				text-shadow: 0 0 50px #ff9d00, 0 0 20px #fff;
+			}
+			100% {
+				text-shadow: 0 0 20px #fff;
+			}
 		}
 
 		img {
 			margin: 2rem;
 			width: 200px;
 			height: 200px;
-		}
-
-		@keyframes glitter {
-			from { color: #fff; }
-			to { color: #ff69b4; }
 		}
 	</style>
 </head>
