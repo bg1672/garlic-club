@@ -12,12 +12,37 @@
 			margin: 0;
 			padding: 0;
 		}
-		
+
 		h1 {
-			font-size: 3rem;
+			font-size: 5rem;
 			margin-top: 2rem;
+			text-shadow: 4px 4px 0px #fff, 6px 6px 0px rgba(255, 255, 255, 0.3);
+			transform: skew(-15deg, 15deg);
+			display: inline-block;
+			padding: 0.3em 1.2em;
+			background-image: linear-gradient(to top, #fff 50%, #bbb 50%);
+			background-size: 100% 200%;
+			transition: all 0.2s ease-in-out;
+			animation: neon 1.5s ease-in-out infinite alternate;
+			box-shadow: 0 0 10px #fff;
+			border-radius: 0.3em;
 		}
-		
+
+		h1:hover {
+			transform: skew(-15deg, 15deg) translate(5px, -5px);
+			background-position: 0 -100%;
+			box-shadow: 0 0 20px #fff;
+		}
+
+		@keyframes neon {
+			from {
+				background-position: 0 0;
+			}
+			to {
+				background-position: 0 -200%;
+			}
+		}
+
 		img {
 			margin: 2rem;
 			width: 200px;
@@ -30,7 +55,7 @@
 	<img src="garlic.png" alt="garlic">
 	<img src="watering_can.png" alt="watering can">
 	<img src="vampire.png" alt="vampire">
-	
+
 	<p>Click the images above to learn more!</p>
 </body>
 </html>
